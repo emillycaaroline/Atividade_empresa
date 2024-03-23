@@ -44,7 +44,7 @@ div{
         $Msmn = 20000;
         $Mmen = 80000;
 
-            if($num >= $Msmn){
+            if($num == $Msmn){
             $bonn = $Msmn * 0.01;
             
                 echo "Bateu a meta $bonn <br>";
