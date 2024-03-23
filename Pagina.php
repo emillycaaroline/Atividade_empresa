@@ -11,8 +11,13 @@
     </style>
 </head>
 <body>
-    <p>NMR</p>
+    
         <div>
+            <p>Funcionario</p>
+        <form action="" method="post">
+                <input type="text" name="name"> <br> <br>
+
+                <p>semana</p>
             <form action="" method="post">
                 <input type="number" name="numero">
 
@@ -32,30 +37,35 @@
         $Msmn = 20000;
         $Mmen = 80000;
 
-         if($num == $Msmn){
+            if($num >= $Msmn){
             $bonus = $Msmn * 0.01;
-            $f = $min + $bonus;
-                echo "Bateu a meta $f";
+            
+                echo "Bateu a meta $bonus <br>";
 
-            }if($num > $Msmn){
+            }else{
+                echo "n bateu<br>";
+            }
+            if($num > $Msmn){
                 $sob = $num - $Msmn ;
                 $bon = $sob * 0.05;
-                $fin = $min + $bon;
-                echo "exedeu a meta semanal $fin";  
-
+               
+                echo "exedeu a meta semanal $bon <br> "; 
+            }else{
+                echo "nn<br>";
             }
             
             if($mes > $Mmen){
                 $sobrou = $mes - $Mmen ;
                 $bonu = $sobrou * 0.1;
-                $finish = $min + $bonu;
-                echo "exedeu a meta mensal $finish"; 
-
-                $finaly = $f + $fin + $finish;
+                echo "exedeu a meta mensal $bonu  <br>";
+            }else{
+                echo "nn<br>";
             }
-            echo "Salario final é $finaly"
 
-         
+            $final = $bon + $bonu + $bonus + $min;
+            echo "<h1>$final </h1>"
+
         ?>
+        
 </body>
 </html>
