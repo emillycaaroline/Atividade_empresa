@@ -24,3 +24,6 @@ Atividade avaliativa de Programação Web II
             }
          
         ?>
+
+        
+            echo "Salario final é $finaly"
