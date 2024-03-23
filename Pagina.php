@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-         body{
-            text-align: center;
-         }
+        body{
+    text-align: center;
+    margin: 10%
+}
+
+div{
+   border: 5px solid rgb(0, 0, 0);
+   padding: 10px;
+   border-radius: 50px;
+}
     </style>
 </head>
 <body>
@@ -28,7 +35,7 @@
                 <br><br>
                 <input type="submit">
             </form>
-        </div>
+        
 
         <?php
         $num = filter_input(INPUT_POST, "numero");
@@ -38,12 +45,13 @@
         $Mmen = 80000;
 
             if($num >= $Msmn){
-            $bonus = $Msmn * 0.01;
+            $bonn = $Msmn * 0.01;
             
-                echo "Bateu a meta $bonus <br>";
+                echo "Bateu a meta $bonn <br>";
 
             }else{
-                echo "n bateu<br>";
+                $bonn = 0;
+                echo "n bateu $bonn<br>";
             }
             if($num > $Msmn){
                 $sob = $num - $Msmn ;
@@ -51,7 +59,8 @@
                
                 echo "exedeu a meta semanal $bon <br> "; 
             }else{
-                echo "nn<br>";
+                $bon = 0;
+                echo "nn $bon<br>";
             }
             
             if($mes > $Mmen){
@@ -59,13 +68,15 @@
                 $bonu = $sobrou * 0.1;
                 echo "exedeu a meta mensal $bonu  <br>";
             }else{
-                echo "nn<br>";
+                $bonu = 00;
+                echo "nn $bonu<br>";
             }
 
-            $final = $bon + $bonu + $bonus + $min;
+            $final = $bon + $bonu + $bonn + $min;
             echo "<h1>$final </h1>"
 
+
         ?>
-        
+        </div>
 </body>
 </html>
