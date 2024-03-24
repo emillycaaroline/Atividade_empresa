@@ -36,7 +36,7 @@ input{
 
 .glow-on-hover:before {
     content: '';
-    background: linear-gradient(45deg, #5200a0, rgba(238,220,255,1) 0%, rgba(208,162,255,1) 74%, rgba(203,119,255,1) 100%);
+    background: linear-gradient(45deg, #5200a0, #351c44, #8000ff, rgba(238,220,255,1) , rgba(208,162,255,1) , rgba(203,119,255,1) );
     position: absolute;
     top: -2px;
     left:-2px;
@@ -86,7 +86,7 @@ input{
     
     <!-- Adicionei uma caixas de texto para informar o nome do funcionario, valores da semana e do mes e o botão -->
         <div>
-            <p>Funcionario</p>
+            <h3>Funcionario</h3>
        <form method="post" action="">
                 <input type="text" name="name"> <br> <br>
 
@@ -106,12 +106,12 @@ input{
                 <form action="" method="post">
                 <input type="number" name="sem4"><br>
 
-                <p>mes</p>
+                <br>mes
                 <form action="" method="post">
                 <input type="number" name="mes">
 
                 <br><br>
-                <button class="glow-on-hover" type="submit">Conferir</button>
+                <button class="glow-on-hover" type="submit">Conferir</button> <br> <br> <br>
 
             </form>
            
