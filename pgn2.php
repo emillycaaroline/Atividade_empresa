@@ -9,23 +9,43 @@
         body {
             text-align: center;
             background: rgb(238, 220, 255);
-            background: rgb(93, 31, 151);
-            background: radial-gradient(circle, rgba(93, 31, 151, 1) 0%, rgba(130, 52, 208, 1) 37%, rgba(131, 59, 204, 1) 68%, rgba(99, 48, 149, 1) 81%, rgba(57, 49, 62, 1) 100%);
+            background: rgb(213, 170, 255);
+            background: radial-gradient(circle, rgba(213, 170, 255, 1) 11%, rgba(195, 148, 255, 1) 76%, rgba(190, 144, 248, 1) 77%, rgba(77, 49, 83, 1) 100%, rgba(148, 187, 233, 1) 100%);
             /* tamanho */
             padding: 1px;
             /* Arredondar a borda */
             border-radius: 50px;
-            color: rgb(255, 255, 255);
         }
 
         input {
-            border-radius: 10px;
-            padding: 3px;
+            padding: 5px;
+            border-radius: 50px;
         }
 
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        h1 {
+            color: #5e29a1;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+
+
         .glow-on-hover {
-            width: 130px;
-            height: 40px;
+            width: 220px;
+            height: 50px;
             border: none;
             outline: none;
             color: #fff;
@@ -38,7 +58,7 @@
 
         .glow-on-hover:before {
             content: '';
-            background: linear-gradient(45deg, #5200a0, #351c44, #8000ff, rgba(238, 220, 255, 1), rgba(208, 162, 255, 1), rgba(203, 119, 255, 1));
+            background: linear-gradient(45deg, #000000, #19002f, #4b028c, #8700ff);
             position: absolute;
             top: -2px;
             left: -2px;
@@ -48,7 +68,7 @@
             width: calc(100% + 4px);
             height: calc(100% + 4px);
             animation: glowing 20s linear infinite;
-            opacity: 100;
+            opacity: 0;
             transition: opacity .3s ease-in-out;
             border-radius: 10px;
         }
@@ -90,39 +110,48 @@
                 background-position: 0 0;
             }
         }
+
+        .caixa-texto {
+            display: inline-block;
+            width: 100px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 
 <body>
 
+    </script>
+
     <!-- Adicionei uma caixas de texto para informar o nome do funcionario, valores da semana e do mes e o botão -->
     <div>
-        <h3>Funcionario</h3>
+        <h1>Calculadora de Salário</h1>
+        <h2>Funcionario</h2>
         <form method="post" action="">
             <input type="text" name="name"> <br> <br>
 
             <br>semana 1
             <form action="" method="post">
-                <input type="number" name="sem1"> <br>
+                <input type="number" class="caixa-texto" name="sem1">
 
-                <br>semana 2
+                semana 2
                 <form action="" method="post">
-                    <input type="number" name="sem2"> <br>
+                    <input type="number" class="caixa-texto" name="sem2" required> <br><br>
 
-                    <br>semana 3
+                    semana 3
                     <form action="" method="post">
-                        <input type="number" name="sem3"><br>
+                        <input type="number" class="caixa-texto" name="sem3">
 
-                        <br>semana 4
+                        semana 4
                         <form action="" method="post">
-                            <input type="number" name="sem4"><br>
+                            <input type="number" class="caixa-texto" name="sem4"> <br><br>
 
                             <br>mes
                             <form action="" method="post">
                                 <input type="number" name="mes">
 
                                 <br><br>
-                                <button class="glow-on-hover" type="submit">Conferir</button> <br> <br> <br>
+                                <button class="glow-on-hover" type="submit">Conferir</button> <br> <br> 
 
                             </form>
 
@@ -147,92 +176,84 @@
                             //Comecei executar o comando, fiz o mesmo para os dias das quatros semanas do mês, se for maior  ou igual começa executar, se não cancela.
                             if ($sem1 >= $Msmn) {
                                 $v = $Msmn * 0.01;
-
-                                echo "<h3>Na primeira semana $fun bateu a meta Valor Bônus:$v.   ";
                             } else {
                                 $v = 0;
-                                echo "Na primeira semana $fun NÃO bateu a meta Valor Bônus:$v.   ";
                             }
                             if ($sem1 > $Msmn) {
                                 $sob = $sem1 - $Msmn;
                                 $va = $sob * 0.05;
-
-                                echo "E exedeu a meta semanal Valor bonus:$va. <br> ";
                             } else {
                                 $va = 0;
-                                echo "E NÃO exedeu a meta Valor Bônus:$va <br>";
                             }
-
+                            //semana 2--------------------------------------------------------------------------
 
                             if ($sem2 >= $Msmn) {
                                 $vv = $Msmn * 0.01;
-
-                                echo "<h3>Na segunda semana $fun bateu a meta Valor Bônus:$vv.   ";
                             } else {
                                 $vv = 0;
-                                echo "Na segunda semana $fun NÃO bateu a meta Valor Bônus:$vv.   ";
                             }
                             if ($sem2 > $Msmn) {
                                 $sob = $sem2 - $Msmn;
                                 $vaa = $sob * 0.05;
-
-                                echo "E exedeu a meta semanal Valor bonus: $vaa <br> ";
                             } else {
                                 $vaa = 0;
-                                echo "E NÃO exedeu a meta Valor Bônus: $vaa<br>";
                             }
 
 
-
+                            //semana 3------------------------------------------------------------------------
                             if ($sem3 >= $Msmn) {
                                 $vvv = $Msmn * 0.01;
-
-                                echo "<h3>Na terceira semana $fun bateu a meta Valor Bônus:$vvv.   ";
                             } else {
                                 $vvv = 0;
-                                echo "Na terceira semana $fun NÃO bateu a meta Valor Bônus:$vvv.   ";
                             }
                             if ($sem3 > $Msmn) {
                                 $sob = $sem3 - $Msmn;
                                 $vaaa = $sob * 0.05;
-
-                                echo "E exedeu a meta semanal Valor bonus: $vaaa <br> ";
                             } else {
                                 $vaaa = 0;
-                                echo "E NÃO exedeu a meta Valor Bônus: $vaaa<br>";
                             }
 
 
-
+                            //semana 4---------------------------------------------------------------------------
                             if ($sem4 >= $Msmn) {
                                 $vvvv = $Msmn * 0.01;
-
-                                echo "<h3>Na quarta semana $fun bateu a meta Valor Bônus:$vvvv.   ";
                             } else {
                                 $vvvv = 0;
-                                echo "Na quarta semana $fun NÃO bateu a meta Valor Bônus:$vvvv.";
                             }
                             if ($sem4 > $Msmn) {
                                 $sob = $sem4 - $Msmn;
                                 $vaaaa = $sob * 0.05;
-
-                                echo "E exedeu a meta semanal Valor bonus: $vaaaa <br> ";
                             } else {
                                 $vaaaa = 0;
-                                echo "E NÃO exedeu a meta Valor Bônus:  $vaaaa<br>";
                             }
 
                             // comando para o mes, que se for maior começa executar a soma caso contrário a porcentagem a receber é 0
                             if ($mes > $Mmen) {
                                 $sobrou = $mes - $Mmen;
-                                $bonu = $sobrou * 0.1;
-                                echo "<h2> Parabens $fun, você exedeu a meta mensal. Valor Bônus:$bonu<h2>  <br>";
+                                $bonu = $sobrou * 0.1;;
                             } else {
                                 $bonu = 00;
-                                echo "Não exedeu a meta $bonu<br> </h3>";
                             }
 
+                            $metaS = $v + $vv + $vvv + $vvvv;
+                            $exS = $va + $vaa + $vaaa + $vaaaa;
 
+                            echo "<h2>Resultados para $fun</h2>";
+
+                            echo "<h3>Bonus recebido por meta semanal: $metaS  ";
+
+                            echo "E exedeu a meta semanal Valor bonus:$va. <br> ";
+
+                            echo "<h3>Na segunda semana bateu a meta Valor Bônus:$exS.   ";
+                            echo "E exedeu a meta semanal Valor bonus: $vaa <br> ";
+
+                            echo "<h3>Na terceira semana bateu a meta Valor Bônus:$vvv.   ";
+                            echo "E exedeu a meta semanal Valor bonus: $vaaa <br> ";
+
+                            echo "<h3>Na quarta semana bateu a meta Valor Bônus:$vvvv.   ";
+                            echo "E exedeu a meta semanal Valor bonus: $vaaaa <br> ";
+
+                            echo "<h2>  exedeu a meta mensal. Valor Bônus:$bonu<h2>  <br>";
 
 
 
