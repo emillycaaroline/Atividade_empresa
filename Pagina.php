@@ -63,11 +63,6 @@
                     $bon = 0;
                     echo "nn $bon<br>";
                 }
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 3cf23c083f53fb6e57ba613057aa5061e15a7780
                 if ($mes > $Mmen) {
                     $sobrou = $mes - $Mmen;
                     $bonu = $sobrou * 0.1;
