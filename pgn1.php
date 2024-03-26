@@ -249,7 +249,7 @@
         } else {
             $vaaaa = 0;
         }
-
+ 
         // comando para o mes, que se for maior começa executar a soma caso contrário a porcentagem a receber é 0
         if ($mes > $Mmen) {
             $sobrou = $mes - $Mmen;

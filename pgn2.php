@@ -73,7 +73,7 @@
                                 $bonusMetaSemanal4=20000*0.01;
                                 echo "$bonusMetaSemanal4";
                             }
-
+ 
                             if($semana1>20000){
                                 $bonusExcedenteSemanal1=($semana1-20000)*0.05;
                                 echo "$bonusExcedenteSemanal1";
