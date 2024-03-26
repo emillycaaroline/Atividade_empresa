@@ -25,9 +25,7 @@ Foi utilizado um [site](https://www.brasilcode.com.br/35-botoes-css-com-animacao
 ![img](img/fotopagina.png)
 
 ## Funcionando
-![img](img/GRAVAÇÃO_ATV_PW2.gif)
-
-![img](img/G2.gif)
+![img](img/GRAVAÇÃO_ATV_PW2.gif) ![img](img/G2.gif)
 
 ## ✒️ Autor
 
