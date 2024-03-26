@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade</title>
+    <title>Atividade-Calculo</title>
     <style>
         body {
             text-align: center;
@@ -17,17 +17,20 @@
         }
 
         input {
+            /* Arruma a borda */
             padding: 5px;
             border-radius: 50px;
         }
 
         .caixa-texto {
+            /* Arruma as caixas de texto */
             display: inline-block;
             width: 100px;
             margin-right: 10px;
         }
 
         .Form {
+            /* Adiciona borda no formulário */
             border: 5px solid #000;
             border-radius: 50px;
             margin-top: 10px;
@@ -39,6 +42,7 @@
         }
 
         h1 {
+            /* Arruma o valor final adicionando cor e borda */
             color: #8700ff;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             border: 2px solid #000;
@@ -50,21 +54,25 @@
         }
 
         h4 {
+            /* Adiciona cor vermelha no alerta de erro para chama atenção */
             color: red;
         }
 
         p {
+            /* Altera a fonte dos valores da meta */
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         .title {
+            /* Coloca cor e almenta o tamanho do titulo */
             color: #5e29a1;
             font-size: 30px;
         }
 
-        /* botão----------------------------------------------------------------------------------------------------------------------- */
+        /* botão Pego de um site no google (site adicionado no README)------------------------------------------------------------------------------------------------------------------ */
         html,
         body {
+            /* alinha a pagina toda incluindo o botão */
             margin: 0;
             padding: 0;
             width: 100%;
@@ -90,6 +98,7 @@
         }
 
         .glow-on-hover:before {
+            /* Adiciona as cores interativas no fundo do botão */
             content: '';
             background: linear-gradient(45deg, #000000, #19002f, #4b028c, #8700ff);
             position: absolute;
@@ -107,15 +116,12 @@
         }
 
         .glow-on-hover:active {
-            color: #000
-        }
-
-        .glow-on-hover:active:after {
-            background: transparent;
+            /* Adiciona ação ao ativar o botão */
+            color: yellow;
         }
 
         .glow-on-hover:hover:before {
-            opacity: 1;
+            opacity: 100;
         }
 
         .glow-on-hover:after {
@@ -263,6 +269,7 @@
         $metaSemanal = $v + $vv + $vvv + $vvvv;
         $excedentesemanal = $va + $vaa + $vaaa + $vaaaa;
 
+
         echo "<h2>Resultado Salárial para $fun</h2>";
 
         echo "<p>Salario minimo: $min</p>";
@@ -273,6 +280,8 @@
 
         echo "<p>  exedeu a meta mensal. Valor Bônus:$bonu</p>  ";
 
+        
+       
 
 
 

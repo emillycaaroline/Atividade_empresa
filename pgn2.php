@@ -12,18 +12,16 @@
             background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(154, 255, 42, 1) 100%);
         }
 
-       
+
         h2 {
             font-family: cursive;
         }
 
         .Pagina {
             border: 10px solid #000;
-
             margin-top: 10px;
-
-            border-style: abstract;
             border-color: #19002f;
+
         }
 
         /* Botão pego da internet */
@@ -72,8 +70,13 @@
 
         h6 {
             font-size: 20px;
-            border: 10px solid #19002f;;
+            border: 10px solid #19002f;
+            ;
             text-align: center;
+        }
+
+        input {
+            border-color: dodgerblue;
         }
     </style>
 </head>
@@ -82,27 +85,27 @@
     <div class="Pagina">
         <h2>Vendedor:</h2>
         <form method="post" action="">
-            <input type="text" name="vendedor">
+            <input required type="text" name="vendedor">
 
             <p>semana 1:</p>
             <form action="" method="post">
-                <input type="number" name="semana1" required>
+                <input required type="number" name="semana1" >
 
                 <p>semana 2:</p>
                 <form action="" method="post">
-                    <input type="number" name="semana2" required>
+                    <input required type="number" name="semana2" >
 
                     <p>semana 3:</p>
                     <form action="" method="post">
-                        <input type="number" name="semana3" required>
+                        <input required type="number" name="semana3" >
 
                         <p>semana 4:</p>
                         <form action="" method="post">
-                            <input type="number" name="semana4" required>
+                            <input required type="number" name="semana4" >
 
                             <p>mês:</p>
                             <form action="" method="post">
-                                <input type="number" name="mes" required>
+                                <input required type="number" name="mes" >
 
                                 <br><br>
                                 <button class="custom-btn btn-2">Verificar</button>
@@ -119,6 +122,11 @@
                                 $SalarioMinimo = 1927.02;
                                 $MetaSemanal = 20000;
                                 $MetaMensal = 80000;
+                                $ValorCertoMes = $semana1 + $semana2 + $semana3 + $semana4;
+
+                                if ($mes != $ValorCertoMes) {
+                                    echo "<script>alert('informe um numero ');</script>";
+                                }
 
                                 //Calcula se o valor ganho é maior que a meta assim ganha 5%
 
@@ -179,14 +187,17 @@
                                     $BonusMensal = 00;
                                 }
 
+
+
+
                                 $TotalBonusSemanal = $bonusMetaSemanal1 +  $bonusMetaSemanal2 +  $bonusMetaSemanal3 +  $bonusMetaSemanal4;
                                 $TotalExcedenteSemanal =  $BonusSemana1 + $BonusSemana2 + $BonusSemana3 + $BonusSemana4;
                                 $SomaTotal = $TotalBonusSemanal + $TotalExcedenteSemanal + $BonusMensal + $SalarioMinimo;
 
-                                echo "<h6>Valor ganho por meta batida no mês $BonusMensal<br>";
+                                echo "<h6>Ganhou por meta batida no mês $BonusMensal<br>";
                                 echo "Valor ganho por meta batida na semana $TotalBonusSemanal<br>";
                                 echo "Valor ganho por meta exedida na semana $TotalExcedenteSemanal<br>";
-                                echo "Valor total com bonus e salário minimo=$SomaTotal</h6>";
+                                echo "Valor total de $vendedor com bonus e salário minimo=$SomaTotal</h6>";
 
                                 ?>
     </div>

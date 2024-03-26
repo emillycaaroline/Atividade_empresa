@@ -8,6 +8,9 @@
 
 ## 🖇️ Etapas:
 Criei um repositório no github e comecei a programação do site usando HTML, adicionei caixas de texto onde dono da empresa irá colocar os valores obtidos pelos funcionários.   Usei o PHP para os cálculos do site, comecando com a porcentagem de cada bonus do valor vendido do funcionario,  exibindo os valores adquiridos e somando com o salario minimo.   Com o CSS fiz a estilização geral da página, modificando o plano de fundo, as fontes de letras ouve polimento das caixas de texto, deixando-as redondas, com o CSS também coloquei o botão interativo que pode calcular os dados que o usuário está buscando. 
+Foi utilizado um [site](https://www.brasilcode.com.br/35-botoes-css-com-animacao/) Para a criação do botão.
+
+![img](img/BOTÃO.gif)
 
 
 ### 🛠️ Tecnologias Utilizadas
@@ -22,6 +25,9 @@ Criei um repositório no github e comecei a programação do site usando HTML, a
 ![img](img/fotopagina.png)
 
 ## Funcionando
+![img](img/GRAVAÇÃO_ATV_PW2.gif)
+
+![img](img/G2.gif)
 
 ## ✒️ Autor
 
