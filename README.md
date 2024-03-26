@@ -21,6 +21,8 @@ Criei um repositório no github e comecei a programação do site usando HTML, a
 
 ![img](img/fotopagina.png)
 
+## Funcionando
+
 ## ✒️ Autor
 
 [<img loading="lazy" src="https://avatars.githubusercontent.com/u/127847857?v=4" width=115><br><sub>Emilly Caroline </sub>](https://github.com/emillycaaroline)<br><br><br>
