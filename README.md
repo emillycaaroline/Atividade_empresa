@@ -25,13 +25,15 @@ Foi utilizado um [site](https://www.brasilcode.com.br/35-botoes-css-com-animacao
 ![img](img/fotopagina.png)
 
 ## Funcionando
+![img](img/GRAVAÇÃO_ATV_PW2.gif)
+-Nessa primeira demonstração os cálculos dão certo e mostra todos os detalhes das metas e por fim o salario total.
+
 ![img](img/G2.gif)
-
-
-![img](img/GRAVAÇÃO_ATV_PW2.gif) 
+-Já nesse exemplo o valor dado no mês não corresponde ao valor dado nas semanas então aparece um alerta de erro para que o dono da empresa cheque de novo.
 
 ## ✒️ Autor
 
 [<img loading="lazy" src="https://avatars.githubusercontent.com/u/127847857?v=4" width=115><br><sub>Emilly Caroline </sub>](https://github.com/emillycaaroline)<br><br><br>
 
-[linkedin](https://www.linkedin.com/in/emilly-caroline-129936290/recent-activity/all/)
+Segue aqui meu[linkedin](https://www.linkedin.com/in/emilly-caroline-129936290/recent-activity/all/)
+
