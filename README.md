@@ -25,4 +25,4 @@ Criei um repositório no github e comecei a programação do site usando HTML, a
 
 [<img loading="lazy" src="https://avatars.githubusercontent.com/u/127847857?v=4" width=115><br><sub>Emilly Caroline </sub>](https://github.com/emillycaaroline)<br><br><br>
 
-[linkedin] (https://www.linkedin.com/in/emilly-caroline-129936290/recent-activity/all/)
+[linkedin](https://www.linkedin.com/in/emilly-caroline-129936290/recent-activity/all/)
