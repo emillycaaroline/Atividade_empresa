@@ -8,23 +8,20 @@
     <style>
         body {
             text-align: center;
-            background: rgb(115, 108, 241);
-            background: linear-gradient(90deg, rgba(115, 108, 241, 1) 0%, rgba(135, 255, 175, 1) 31%, rgba(191, 255, 85, 1) 47%, rgba(211, 255, 183, 1) 69%, rgba(213, 255, 193, 1) 69%, rgba(117, 124, 234, 1) 100%);
+            background: rgb(34, 193, 195);
+            background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(154, 255, 42, 1) 100%);
         }
 
-        input {
-            margin-right: 1px;
-        }
-
+       
         h2 {
             font-family: cursive;
         }
 
         .Pagina {
-            border: 5px solid #000;
+            border: 10px solid #000;
 
             margin-top: 10px;
-            
+
             border-style: abstract;
             border-color: #19002f;
         }
@@ -34,9 +31,8 @@
             width: 130px;
             height: 40px;
             color: #fff;
-            border-radius: 5px;
             padding: 10px 25px;
-            font-family: 'Lato', sans-serif;
+
             font-weight: 500;
             background: transparent;
             cursor: pointer;
@@ -51,8 +47,10 @@
 
         .btn-2 {
             background: rgb(115, 108, 241);
-            background: linear-gradient(90deg, rgba(232, 233, 255, 1) 100%,   rgba(168, 165, 255, 1) 58%, rgba(115, 108, 241, 1) 0%,);
+            background: wheat;
             border: none;
+            color: #000;
+            font-family: cursive;
 
         }
 
@@ -67,8 +65,15 @@
                 inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
                 inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
         }
-        p{
+
+        p {
             font-family: cursive;
+        }
+
+        h6 {
+            font-size: 20px;
+            border: 10px solid #19002f;;
+            text-align: center;
         }
     </style>
 </head>
@@ -77,7 +82,7 @@
     <div class="Pagina">
         <h2>Vendedor:</h2>
         <form method="post" action="">
-            <input type="text" name="vendedor"> 
+            <input type="text" name="vendedor">
 
             <p>semana 1:</p>
             <form action="" method="post">
@@ -93,7 +98,7 @@
 
                         <p>semana 4:</p>
                         <form action="" method="post">
-                            <input type="number" name="semana4" required> 
+                            <input type="number" name="semana4" required>
 
                             <p>mês:</p>
                             <form action="" method="post">
@@ -101,7 +106,7 @@
 
                                 <br><br>
                                 <button class="custom-btn btn-2">Verificar</button>
-                                <br> <br>
+
 
                                 <?php
                                 //Variáveia
@@ -120,7 +125,7 @@
                                 if ($semana1 > 20000) {
                                     $BonusSemana1 = ($semana1 - 20000) * 0.05;
                                 } else {
-                                    $BonusSemana2 = 00;
+                                    $BonusSemana1 = 00;
                                 }
                                 if ($semana2 > 20000) {
                                     $BonusSemana2 = ($semana2 - 20000) * 0.05;
@@ -135,7 +140,7 @@
                                 if ($semana4 > 20000) {
                                     $BonusSemana4 = ($semana4 - 20000) * 0.05;
                                 } else {
-                                    $Bonuss = 00;
+                                    $BonusSemana4 = 00;
                                 }
 
                                 //Calcula se o valor semanal se for igual ganha 1%
@@ -178,15 +183,14 @@
                                 $TotalExcedenteSemanal =  $BonusSemana1 + $BonusSemana2 + $BonusSemana3 + $BonusSemana4;
                                 $SomaTotal = $TotalBonusSemanal + $TotalExcedenteSemanal + $BonusMensal + $SalarioMinimo;
 
-                                echo "<h6>Valor ganho por meta batida na semana $TotalBonusSemanal</h6>";
-                                echo "<h6>Valor ganho por meta exedida na semana $TotalExcedenteSemanal</h6>";
-                                echo "<h6>Valor ganho por meta batida no mês $BonusMensal</h6>";
-                                echo "<h6>total=$SomaTotal</h6>";
+                                echo "<h6>Valor ganho por meta batida no mês $BonusMensal<br>";
+                                echo "Valor ganho por meta batida na semana $TotalBonusSemanal<br>";
+                                echo "Valor ganho por meta exedida na semana $TotalExcedenteSemanal<br>";
+                                echo "Valor total com bonus e salário minimo=$SomaTotal</h6>";
 
                                 ?>
     </div>
 
->>>>>>> 3bd95cc12b30b9a7e9b411851efac0a17b1dc819
 
 </body>
 
