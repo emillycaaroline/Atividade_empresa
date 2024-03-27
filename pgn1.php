@@ -152,7 +152,7 @@
 
                 <br>semana 1
                 <form action="" method="post">
-                    <input type="number" class="caixa-texto" name="sem1" required>
+                     <input type="number" class="caixa-texto" name="sem1" required>          <!--required torna o formulario obrigatorio -->
 
                     semana 2
                     <form action="" method="post">
@@ -179,7 +179,7 @@
 
 
         <?php
-        // Comecei fazendo variaveis para as caixas de texto
+        // Comecei fazendo variaveis para puxar a informação adicionada em cada caixa de texto
         $fun = filter_input(INPUT_POST, "name");
 
         $sem1 = filter_input(INPUT_POST, "sem1");
@@ -189,7 +189,7 @@
 
         $mes = filter_input(INPUT_POST, "mes");
 
-        // Variaveis para o valor que é confirmado no fim e as metas a serem batidas.
+        // Variaveis para o valor do salario minimo que é confirmado no fim e as metas a serem batidas.
         $min = 1927.02;
         $Msmn = 20000;
         $Mmen = 80000;
@@ -197,23 +197,24 @@
         $totalSem = $sem1 + $sem2 + $sem3 + $sem4;
         if ($mes != $totalSem) {
             echo "<h4>Possivel Erro: A soma das semanas não é igual ao valor do mês.</h4>";
-            // Variavel para que o mês seja obrigatóriamente a soma das quatro semanas .
+            // Variavel para informar um possivel erro se o valor mensal não bater com as semanas .
         }
 
 
 
-        //Comecei executar o comando, fiz o mesmo para os dias das quatros semanas do mês, se for maior  ou igual começa executar, se não cancela.
+        //Comecei executar o comando, fiz o mesmo para os dias das quatros semanas do mês, se for maior  ou igual começa executar e irá calcular 1% dos 20 000, se não o valor passa a ser 0.
         if ($sem1 >= $Msmn) {
             $v = $Msmn * 0.01;
         } else {
             $v = 0;
         }
-        if ($sem1 > $Msmn) {
+        if ($sem1 > $Msmn) { // se o valor for maior vai somar 5% a mais sobre oque sobrar.
             $sob = $sem1 - $Msmn;
             $va = $sob * 0.05;
         } else {
             $va = 0;
         }
+        //As semnas seguintes apenas se repete o processo.
         //semana 2------------------------------------------------------------------------------------------------------------------
 
         if ($sem2 >= $Msmn) {
@@ -256,7 +257,7 @@
             $vaaaa = 0;
         }
  
-        // comando para o mes, que se for maior começa executar a soma caso contrário a porcentagem a receber é 0
+        // comando para o mes, que se for maior começa executar e somar 5% do que excedeu a soma caso contrário o valor passa ser 0
         if ($mes > $Mmen) {
             $sobrou = $mes - $Mmen;
             $bonu = $sobrou * 0.1;;
@@ -265,11 +266,11 @@
         }
 
 
-
+        //variavel responsavel por somar o valor total ganho nas metas 
         $metaSemanal = $v + $vv + $vvv + $vvvv;
         $excedentesemanal = $va + $vaa + $vaaa + $vaaaa;
 
-
+        //Adiciona os valores na tela
         echo "<h2>Resultado Salárial para $fun</h2>";
 
         echo "<p>Salario minimo: $min</p>";
@@ -283,7 +284,7 @@
         
        
 
-
+        // valor do salario final (soma de tudo)
 
         //Variavel responsavel pelo valor do salario final onde soma o bonus recebido de cada semana e mes e soma com o salario minimo
         $sf = $va + $vaa +  $vaaa + $vaaaa + $v + $vv + $vvv + $vvvv + $bonu + $min;
